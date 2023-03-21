@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  search_create2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: search_create2
+    volumes:
+      - .:/app
+    command: cargo run --release -- $CMD_ARGS
+    environment:
+      - CMD_ARGS
