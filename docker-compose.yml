@@ -11,3 +11,4 @@ services:
     command: cargo run --release -- $CMD_ARGS
     environment:
       - CMD_ARGS
+    init: true
